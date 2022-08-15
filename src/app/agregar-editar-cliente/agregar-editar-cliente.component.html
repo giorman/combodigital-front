@@ -1,0 +1,27 @@
+<div class="container fix">
+    <h5 *ngIf="!editable" class="mb-4">Agregar Cliente</h5>
+    <h5 *ngIf="editable" class="mb-4">Editar Cliente</h5>
+    <form [formGroup]="formulario">
+        <div class="mb-3">
+            <label for="nombres" class="form-label">Nombres</label>
+            <input type="text" class="form-control" id="nombres" formControlName="nombre" required>
+        </div>
+        <div class="mb-3">
+            <label for="apellidos" class="form-label">Apellidos</label>
+            <input type="text" class="form-control" id="apellidos" formControlName="apellido">
+        </div>
+        <div class="mb-3">
+            <label for="telefono" class="form-label">Celular</label>
+            <input type="number" class="form-control" id="telefono" formControlName="telefono">
+        </div>
+        <div *ngIf="!editable" class="mt-5">
+            <button type="submit" [disabled]="!formulario.valid" (click)="guardar()" class="btn btn-primary me-2">Guardar</button>
+            <button type="submit" (click)="atras()" class="btn btn-danger">Volver</button>
+        </div>
+
+        <div *ngIf="editable" class="mt-5">
+            <button type="submit" [disabled]="!formulario.valid" (click)="editar()" class="btn btn-primary me-2">Editar</button>
+            <button type="submit" (click)="atras()" class="btn btn-danger">Cancelar</button>
+        </div>
+    </form>
+</div>

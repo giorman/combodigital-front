@@ -1,0 +1,35 @@
+<div class="container fix">
+    <h5>Editar suscripcion</h5>
+    <form [formGroup]="formulario" action="" class="row mt-4 ">
+        <div class="col-sm-6 mb-2">
+            <label for="inputEmail4" class="form-label">Correo</label>
+            <input type="email" class="form-control" id="inputEmail4" formControlName="correo">
+        </div>
+        <div class="col-sm-6 mb-2">
+            <label for="inputPassword4" class="form-label">Contraseña</label>
+            <input type="text" class="form-control" id="inputPassword4" formControlName="password">
+        </div>
+        <div class="col-sm-6 mb-2">
+            <label for="inputPerfil" class="form-label">Perfil</label>
+            <input type="text" class="form-control" id="inputPerfil" formControlName="perfil">
+        </div>
+        <div class="col-sm-6 mb-2">
+            <label for="inputPin" class="form-label">Pin</label>
+            <input type="text" class="form-control" id="inputPin" formControlName="pin">
+        </div>
+
+        <div class="col-sm-6 mb-2">
+            <label for="inputFechaInicio" class="form-label">Fecha Inicio</label>
+            <input type="date" class="form-control" id="inputFechaInicio" formControlName="fechaInicio">
+        </div>
+        <div class="col-sm-6 mb-2">
+          <label for="inputFechaFinal" class="form-label">Fecha Final</label>
+          <input type="date" class="form-control" id="inputFechaFinal" formControlName="fechaFinal">
+      </div>
+
+        <div class="col-12 mt-3">
+            <button [disabled]="formulario.invalid" (click)="editar()" class="btn btn-primary me-3">Editar</button>
+            <button class="btn btn-danger" (click)="atras()">Volver</button>
+        </div>
+    </form>
+</div>
