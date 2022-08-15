@@ -3,12 +3,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Cuenta } from '../models/cuenta';
 import { Observable } from 'rxjs';
 import { Suscripcion } from '../models/suscripcion';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CuentaService {
-  private endpoint: string = 'http://localhost:8080/api/combodigital/';
+  private endpoint= environment.apiBaseURL;;
   private headers: HttpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
     Authorization: 'my-auth-token',

@@ -3,12 +3,13 @@ import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Suscripcion } from '../models/suscripcion';
 import { Cliente } from '../models/cliente';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SuscripcionService {
-  private endpoint: string = 'http://localhost:8080/api/combodigital/';
+  private endpoint = environment.apiBaseURL;;
   private headers: HttpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
     Authorization: 'my-auth-token',

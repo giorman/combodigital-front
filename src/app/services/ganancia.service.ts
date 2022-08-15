@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Ganancia } from '../models/ganancia';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GananciaService {
-  private endpoint: string = 'http://localhost:8080/api/combodigital/';
+  private endpoint = environment.apiBaseURL;
   private headers: HttpHeaders = new HttpHeaders({
     'Content-Type': 'application/json',
     Authorization: 'my-auth-token',
