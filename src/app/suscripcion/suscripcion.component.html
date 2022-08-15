@@ -1,0 +1,26 @@
+<div class="container fix ">
+    <h4 class="mb-3">Suscripcion</h4>
+    <div *ngIf="!cliente" class="form-group">
+        <input type="text" (input)="buscar($event)" class="form-control" placeholder="Busque un cliente">
+        <div *ngIf="!visible" class="alert alert-danger" role="alert">
+            Seleccione un cliente para continuar...
+        </div>
+        <ul *ngIf="visible" class="list-group mb-2" id="listamotoresbusqueda">
+            <div *ngFor="let cliente of clientes" class="list-group-item" (click)="agregar(cliente)">
+                <a>{{cliente.nombre}} {{cliente.apellido}}</a>
+            </div>
+        </ul>
+    </div>
+    <div class="row">
+        <div class="col-12 col-sm-9 mb-2">
+            <input type="text" disabled *ngIf="cliente" [(ngModel)]="cliente.nombre+' '+ cliente.apellido" class="form-control">
+        </div>
+        <div class="col-12 col-sm-3 ">
+            <button (click)="cancelar()" *ngIf="cliente" class="btn btn-danger">Cancelar</button>
+        </div>
+    </div>
+    <app-suscripcion-datos [cliente]="cliente" *ngIf="cliente"></app-suscripcion-datos>
+
+    <img *ngIf="!cliente" src="../assets/fondo.jpeg" alt="" class="img-fluid mx-auto d-block w-25">
+
+</div>
