@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  apiBaseURL: 'https://mi_aplicacion.herokuapp.com'
+  apiBaseURL: 'https://api-demo-combo.herokuapp.com/api/combodigital/'
 };
