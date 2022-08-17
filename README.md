@@ -2,6 +2,14 @@
 
 ## Repositorio Backend [Enlace](https://github.com/giorman/combodigital-backend)
 
+# [Demo](https://giorman.github.io/combodigital-frontend/)
+
+-  Este [enlace](https://giorman.github.io/combodigital-frontend/) es un demo de la app que se encuentra su front-end en gitpages y su backend en heroku
+
+## Recomendaciones
+
+- Esperar un momento y recargar la app mientras se activa el servidor donde esta alojado el backend
+
 ## Funcionalidad
 
 * Esta app es realizada para manejar el registro de suscripciones a cuentas streamings
@@ -20,14 +28,6 @@
 - Permite ver las suscripciones que ya expiraron
 * Cuentas: Permite ver,agregar,editar,eliminar los tipos de cuentas que cuentas que se venden
 * Ganancia: Permite agregar la ganacia por la venta y esta se asigna automaticamente al mes en curso
-
-# Demo
-
--  Este [enlace](https://giorman.github.io/combodigital-frontend/) es un demo de la app que se encuentra su front-end en gitpages y su backend en heroku
-
-## Recomendaciones
-
-- Esperar un momento y recargar la app mientras se activa el servidor donde esta alojado el backend
 
 ## Ramas
 
