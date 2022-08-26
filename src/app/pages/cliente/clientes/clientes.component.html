@@ -1,0 +1,21 @@
+<div class="container fix">
+    <h4>Clientes</h4>
+    <div class="mb-3">
+        <input type="text" (input)="buscar($event)" class="form-control" placeholder="Busque un cliente">
+    </div>
+    <div class="row">
+        <div class="col-sm-3" *ngFor="let cliente of clientes">
+            <div class="card mb-2">
+                <div class="card-body">
+                    <h5 class="card-title">{{cliente.nombre}} {{cliente.apellido}}</h5>
+                    <h6 class="card-subtitle mb-2 text-muted">{{cliente.telefono}}
+                        <a href="https://api.whatsapp.com/send?phone=57{{cliente.telefono}}" target="_blank"><img src="assets/whatsapp.png" width="30px" alt=""></a>
+                    </h6>
+                    <a class="card-link me-5 text-decoration-none" [routerLink]="['/cliente-suscripciones/'+cliente.id]">Ver suscripciones</a>
+                    <button class="btn btn-primary mt-3 me-2" routerLink="/editar-cliente/{{cliente.id}}">Editar</button>
+                    <button class="btn btn-danger mt-3 " (click)="eliminar(cliente.id)">Eliminar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

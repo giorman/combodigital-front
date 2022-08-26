@@ -1,0 +1,62 @@
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" routerLink="">
+            <img width="140px" height="50px" src="assets/combodigital.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-md-0">
+                <li class="nav-item ">
+                    <a class="nav-link active " routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-current="page" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">Inicio
+                    </a>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link  dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Clientes
+                </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" routerLink="/agregar-cliente" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">Agregar</a></li>
+                        <li><a class="dropdown-item" routerLink="/clientes" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">Clientes</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown ">
+                    <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Suscripciones
+              </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" routerLink="buscador" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        Buscar
+                      </a></li>
+                        <li><a class="dropdown-item" routerLink="renovaciones" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                          Renovaciones <span class="badge bg-primary"> {{this.suscripcionServicio.listaRenovaciones.length}}</span>
+                        </a></li>
+                        <li><a class="dropdown-item" routerLink="vencidas" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                          Vencidas <span class="badge bg-primary">{{this.suscripcionServicio.listaVencidas.length}}</span>
+                        </a></li>
+                    </ul>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/cuentas" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">Cuentas</a>
+                </li>
+                <li class="nav-item ">
+                    <a class="nav-link" routerLink="/ganancias" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">Ganancias</a>
+                </li>
+                <li *ngIf="ventaServicio.venta" class="nav-item ms-1">
+                    <a class=" nav-link position-relative " routerLink="/venta" routerLinkActive="active" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"> Carrito
+                    <span class="badge bg-primary">
+                      {{ventaServicio.listaSuscripciones.length}}
+                   </span>
+                 </a>
+                </li>
+
+            </ul>
+            <div class="d-flex " *ngIf="ventaServicio.venta ">
+                <span class="badge rounded-pill bg-danger p-2 me-3 ">
+                {{ventaServicio.venta.cliente}}
+                </span>
+            </div>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,52 @@
+<div class="container fix">
+  <h4 class="mb-4">Renovaciones</h4>
+  <div class="table-responsive">
+    <table class="table table-dark table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Cliente</th>
+          <th scope="col">Cuenta</th>
+          <th scope="col">Correo</th>
+          <th scope="col">Contraseña</th>
+          <th scope="col">Perfil</th>
+          <th scope="col">Pin</th>
+          <th scope="col">Proveedor</th>
+          <th scope="col">Fecha Inicial</th>
+          <th scope="col">Fecha Final</th>
+          <th scope="col">Precio</th>
+          <th scope="col">Estado</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let suscripcion of renovaciones" >
+          <th scope="row">
+            {{ suscripcion.cliente.nombre }} {{ suscripcion.cliente.apellido }}
+            <a href="https://api.whatsapp.com/send?phone=57{{
+                suscripcion.cliente.telefono
+              }}" target="_blank"><img src="assets/whatsapp.png" width="20px" alt="" /></a>
+          </th>
+          <td>{{ suscripcion.cuenta.nombre }}</td>
+          <td>{{ suscripcion.correo }}</td>
+          <td>{{ suscripcion.password }}</td>
+          <td>{{ suscripcion.perfil }}</td>
+          <td>{{ suscripcion.pin }}</td>
+          <td>{{ suscripcion.proveedor }}</td>
+          <td>{{ suscripcion.fechaInicio | date }}</td>
+          <td>{{ suscripcion.fechaFinal | date }}</td>
+          <td>{{ suscripcion.precio | currency }}</td>
+          <td *ngIf="suscripcion.estado">
+            <a class="ms-2"><img width="30px" src="assets/activo.png" alt="" />
+            </a>
+          </td>
+          <td *ngIf="!suscripcion.estado">
+            <a class="ms-2"><img width="30px" src="assets/inactivo1.png" alt="" />
+            </a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div>
+    <button (click)="volver()" class="btn btn-danger">Volver</button>
+  </div>
+</div>

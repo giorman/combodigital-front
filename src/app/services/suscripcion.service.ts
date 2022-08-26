@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 import { HttpHeaders, HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Suscripcion } from '../models/suscripcion';
-import { Cliente } from '../models/cliente';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -32,26 +31,6 @@ export class SuscripcionService {
     );
   }
 
-  //consulta todas las suscripciones que deben ser renovadas
-  consultarRenovaciones():Observable<Suscripcion[]> {
-    return this.http.get<Suscripcion[]>(
-      `${this.endpoint}consultar/renovaciones`
-    );
-  }
-
-  //consulta todas las suscripciones que ya expiraron
-  consultarVencidas():Observable<Suscripcion[]> {
-    return this.http.get<Suscripcion[]>(`${this.endpoint}consultar/vencidas`, {
-      headers: this.headers,
-    });
-  }
-
-  //permite obtener el cliente de una suscripcion por medio de su id
-  // consultarClienteSuscripcion(id: string):Observable<Cliente> {
-  //   return this.http.get<Cliente>(
-  //     `${this.endpoint}consultar/suscripcion/${id}/cliente`
-  //   );
-  // }
 
   //permite agregar una suscripcion nueva api-post
   agregarSuscripcion(suscripcion: Suscripcion):Observable<Suscripcion> {
@@ -76,6 +55,20 @@ export class SuscripcionService {
     return this.http.delete<void>(`${this.endpoint}eliminar/suscripcion/${id}`);
   }
 
+  //consulta todas las suscripciones que deben ser renovadas
+  consultarRenovaciones():Observable<Suscripcion[]> {
+    return this.http.get<Suscripcion[]>(
+      `${this.endpoint}consultar/renovaciones`
+    );
+  }
+
+  //consulta todas las suscripciones que ya expiraron
+  consultarVencidas():Observable<Suscripcion[]> {
+    return this.http.get<Suscripcion[]>(`${this.endpoint}consultar/vencidas`, {
+      headers: this.headers,
+    });
+  }
+
   //metodo actualizador vencidas
   get listaVencidas(): Suscripcion[] {
     return this.vencidas;
@@ -86,12 +79,4 @@ export class SuscripcionService {
     return this.renovaciones;
   }
 
-  //permite agregar los datos del cliente a cada suscripcion
-  // agregarClienteLista(array: Suscripcion[]) {
-  //   array.forEach((resultado) => {
-  //     this.consultarClienteSuscripcion(resultado.id).subscribe((cliente) => {
-  //       resultado.cliente = cliente;
-  //     });
-  //   });
-  // }
 }
