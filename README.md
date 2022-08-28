@@ -1,5 +1,7 @@
 # Proyecto Combo Digital-Frontend
 
+- Este app fue diseñada para el manejo de suscripciones,clientes,cuentas de streaming.
+
 ## Repositorio Backend [Enlace](https://github.com/giorman/combodigital-backend)
 
 # [Demo](https://giorman.github.io/combodigital-frontend/)
@@ -9,6 +11,10 @@
 ## Recomendaciones
 
 - Esperar un momento y recargar la app mientras se activa el servidor donde esta alojado el backend
+
+## Tecnologias
+
+- Angular 13.3.9, HTML, CSS, Typescript
 
 ## Funcionalidad
 
