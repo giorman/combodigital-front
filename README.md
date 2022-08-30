@@ -1,12 +1,10 @@
 # Proyecto Combo Digital-Frontend
 
-- Este app fue diseñada para el manejo de suscripciones,clientes,cuentas de streaming.
-
 ## Repositorio Backend [Enlace](https://github.com/giorman/combodigital-backend)
 
-# [Demo](https://giorman.github.io/combodigital-frontend/)
+## Aplicacion [demo](https://giorman.github.io/combodigital-frontend/)
 
--  Este [enlace](https://giorman.github.io/combodigital-frontend/) es un demo de la app que se encuentra su front-end en gitpages y su backend en heroku
+- Este [enlace](https://giorman.github.io/combodigital-frontend/) es un demo de la app que se encuentra su front-end en gitpages y su backend en heroku
 
 ## Recomendaciones
 
