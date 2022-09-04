@@ -26,6 +26,7 @@
 * Clientes: 
 - Tiene la opcion de agregar un cliente 
 - Visualizar todos los clientes
+
 * Suscripciones: 
 - Tienes la opciones de buscar una suscripcion por los parametros de tipo de cuenta o correo
 - Permite ver las suscripciones que se deben renovar por que estan proximas a vencer
