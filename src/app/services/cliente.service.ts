@@ -23,36 +23,36 @@ export class ClienteService {
 
   // consulta lista clientes api get
   consultarLista(): Observable<Cliente[]> {
-    return this.http.get<Cliente[]>(`${this.endpoint}lista/cliente`);
+    return this.http.get<Cliente[]>(`${this.endpoint}cliente`);
   }
 
   // consulta cliente api get
   consultarCliente(id: string): Observable<Cliente> {
-    return this.http.get<Cliente>(`${this.endpoint}consultar/cliente/${id}`);
+    return this.http.get<Cliente>(`${this.endpoint}cliente/${id}`);
   }
 
   //consulta suscripciones del cliente
   consultarClienteSuscripcion(id:string):Observable<Suscripcion[]>{
 
-    return this.http.get<Suscripcion[]>(`${this.endpoint}consultar/cliente/${id}/suscripcion`);
+    return this.http.get<Suscripcion[]>(`${this.endpoint}cliente/${id}/suscripcion`);
   }
 
   // guarda cliente api post
   guardarCliente(cliente: Cliente): Observable<Cliente> {
-    return this.http.post<Cliente>(`${this.endpoint}guardar/cliente`, cliente, {
+    return this.http.post<Cliente>(`${this.endpoint}cliente`, cliente, {
       headers: this.headers,
     });
   }
 
   // editar cliente api put
   editarCliente(cliente: Cliente): Observable<Cliente> {
-    return this.http.put<Cliente>(`${this.endpoint}editar/cliente`, cliente, {
+    return this.http.put<Cliente>(`${this.endpoint}cliente`, cliente, {
       headers: this.headers,
     });
   }
 
   //eliminar cliente api delete
   eliminarCliente(id: number): Observable<void> {
-    return this.http.delete<void>(`${this.endpoint}eliminar/cliente/${id}`);
+    return this.http.delete<void>(`${this.endpoint}cliente/${id}`);
   }
 }

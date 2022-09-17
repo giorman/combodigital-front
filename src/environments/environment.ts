@@ -4,7 +4,7 @@
 
 export const environment = {
   production: true,
-  apiBaseURL: 'http://localhost:8080/api/combodigital/'
+  apiBaseURL: 'http://localhost:8080/api/combodigital/v1/'
 };
 
 /*

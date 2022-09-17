@@ -21,13 +21,13 @@ export class SuscripcionService {
 
   //consultar todas las suscripciones api-get
   consultarSuscripciones():Observable<Suscripcion[]> {
-    return this.http.get<Suscripcion[]>(`${this.endpoint}lista/suscripcion`);
+    return this.http.get<Suscripcion[]>(`${this.endpoint}suscripcion`);
   }
 
   //consulta una suscripcion api-get
   consultarSuscripcion(id: string):Observable<Suscripcion> {
     return this.http.get<Suscripcion>(
-      `${this.endpoint}consultar/suscripcion/${id}`
+      `${this.endpoint}suscripcion/${id}`
     );
   }
 
@@ -35,7 +35,7 @@ export class SuscripcionService {
   //permite agregar una suscripcion nueva api-post
   agregarSuscripcion(suscripcion: Suscripcion):Observable<Suscripcion> {
     return this.http.post<Suscripcion>(
-      `${this.endpoint}agregar/suscripcion`,
+      `${this.endpoint}suscripcion`,
       suscripcion,
       { headers: this.headers }
     );
@@ -44,7 +44,7 @@ export class SuscripcionService {
   //permite editar una suscripcion api-put
   editarSuscripcion(suscripcion: Suscripcion):Observable<Suscripcion> {
     return this.http.put<Suscripcion>(
-      `${this.endpoint}editar/suscripcion`,
+      `${this.endpoint}suscripcion`,
       suscripcion,
       { headers: this.headers }
     );
@@ -52,19 +52,19 @@ export class SuscripcionService {
 
   //permite eliminar una suscripcion api-delete
   eliminarSuscripcion(id: string): Observable<void> {
-    return this.http.delete<void>(`${this.endpoint}eliminar/suscripcion/${id}`);
+    return this.http.delete<void>(`${this.endpoint}suscripcion/${id}`);
   }
 
   //consulta todas las suscripciones que deben ser renovadas
   consultarRenovaciones():Observable<Suscripcion[]> {
     return this.http.get<Suscripcion[]>(
-      `${this.endpoint}consultar/renovaciones`
+      `${this.endpoint}suscripcion/renovaciones`
     );
   }
 
   //consulta todas las suscripciones que ya expiraron
   consultarVencidas():Observable<Suscripcion[]> {
-    return this.http.get<Suscripcion[]>(`${this.endpoint}consultar/vencidas`, {
+    return this.http.get<Suscripcion[]>(`${this.endpoint}suscripcion/vencidas`, {
       headers: this.headers,
     });
   }

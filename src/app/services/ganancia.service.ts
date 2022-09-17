@@ -18,7 +18,7 @@ export class GananciaService {
 
   //consulta listal de ganancias de todos los meses api-get
   consultarLista(): Observable<Ganancia[]> {
-    return this.http.get<Ganancia[]>(`${this.endpoint}lista/ganancia`, {
+    return this.http.get<Ganancia[]>(`${this.endpoint}ganancia`, {
       headers: this.headers,
     });
   }
@@ -26,7 +26,7 @@ export class GananciaService {
   //permite enviar una nueva ganancia y retorna la lista actulizada de ganancias de los meses
   editarValorGanancia(valor: number | null): Observable<Ganancia[]> {
     return this.http.put<Ganancia[]>(
-      `${this.endpoint}valor/ganancia/${valor}`,
+      `${this.endpoint}ganancia/valor/${valor}`,
       { headers: this.headers }
     );
   }
