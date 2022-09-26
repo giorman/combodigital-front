@@ -1,42 +1,56 @@
 # Proyecto Combo Digital-Frontend
 
+## Aplicación [Demo](https://giorman.github.io/combodigital-frontend/)
+
+* Este [enlace](https://giorman.github.io/combodigital-frontend/) es un demo de la app, su frontend se encuentra alojado en GitHub Pages y su backend en Heroku
+
+* Se recomienda esperar un momento y recargar la app mientras se activa el servidor donde está alojado el backend
+
 ## Repositorio Backend [Enlace](https://github.com/giorman/combodigital-backend)
 
-## Aplicacion [demo](https://giorman.github.io/combodigital-frontend/)
+## Tecnologías
 
-- Este [enlace](https://giorman.github.io/combodigital-frontend/) es un demo de la app que se encuentra su front-end en gitpages y su backend en heroku
-
-## Recomendaciones
-
-- Esperar un momento y recargar la app mientras se activa el servidor donde esta alojado el backend
-
-## Tecnologias
-
-- Angular 13.3.9, HTML, CSS, Typescript
+* Angular 13.3.5
+* Typescript
+* HTML5
+* CSS3
+* Bootstrap 5
 
 ## Funcionalidad
 
-* Esta app es realizada para manejar el registro de suscripciones a cuentas streamings
-* Permite realizar manejo de clientes,suscripciones,cuentas y ganancias
-* Permite tambien el manejo de renovaciones y vencimiento de suscripciones
+* Esta app es realizada para gestionar el registro de suscripciones a plataformas de streaming
+* Permite realizar la gestión de clientes, suscripciones, cuentas y ganancias
+* Permite visualizar las renovaciones y vencimiento de suscripciones
 
 ## Secciones
 
-* Inicio: Permite buscar un cliente para realizar una venta de una o mas suscripciones
-* Clientes: 
-- Tiene la opcion de agregar un cliente 
-- Visualizar todos los clientes
+### Inicio: 
 
-* Suscripciones: 
-- Tienes la opciones de buscar una suscripcion por los parametros de tipo de cuenta o correo
-- Permite ver las suscripciones que se deben renovar por que estan proximas a vencer
-- Permite ver las suscripciones que ya expiraron
-* Cuentas: Permite ver,agregar,editar,eliminar los tipos de cuentas que cuentas que se venden
-* Ganancia: Permite agregar la ganacia por la venta y esta se asigna automaticamente al mes en curso
+* Buscar un cliente seleccionarlo para realizar la venta de una o más suscripciones a cuenta de streaming
+
+### Clientes: 
+
+* Agregar un cliente
+* Clientes visualiza todos los clientes, buscar, editar y eliminar
+
+### Suscripciones: 
+
+* Buscar una suscripción por los parámetros de tipo de cuenta y/o correo
+* Renovaciones visualiza toda la información de las suscripciones próximas a vencer
+* Vencidas visualiza toda la información de las suscripciones que ya expiraron
+
+### Cuentas: 
+
+* Gestionar los tipos de cuentas de streaming
+
+### Ganancia: 
+
+* Agregar manualmente la ganancia por la venta y esta se asigna automáticamente al mes en curso
 
 ## Ramas
 
 * La Rama Master funciona en local
+
 
 ## Development server
 
